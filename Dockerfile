@@ -11,3 +11,9 @@ RUN apt-get install -y ansible
 
 RUN ansible-galaxy install angstwad.docker\_ubuntu
 RUN pip install pyrax
+RUN pip install --upgrade six
+
+ADD run.sh /run.sh
+RUN chmod u+x /run.sh
+
+CMD ["./run.sh"]

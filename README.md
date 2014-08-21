@@ -7,6 +7,9 @@ tools like pyrax (refer to Dockerfile to see what is exactly installed).
 
 Simply run the following command in your term:
 
-    $ docker run -ti erwyn/ansible /bin/bash
+    $ docker run -ti \
+    -v <pathToYourAnsiblePlaybooks>:/data \
+    -v <pathToYour.sshFolder>:/ssh \
+    erwyn/ansible
 
 You are in a terminal with ansible, that's all!
